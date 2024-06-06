@@ -1,4 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
+import playbutton from './assets/play.png'
+import pausebutton from './assets/pause.png'
+import resetbutton from './assets/reset.png'
 
 function StopWatch(){
 
@@ -57,9 +60,9 @@ function StopWatch(){
         <h2 className="header">STOPWATCH</h2>
         <div className="display">{formatTime()}</div>
         <div className="controls">
-            <button onClick={stop} className="stop-button">Stop</button>
-            <button onClick={start} className="start-button">Start</button>
-            <button onClick={reset} className="reset-button">Reset</button>
+            <button onClick={stop} className="stop-button"><img src={pausebutton} width={30}/></button>
+            <button onClick={start} className="start-button"><img src={playbutton} width={30}/></button>
+            <button onClick={reset} className="reset-button"><img src={resetbutton} width={26}/></button>
         </div>
     </div>);
 }
